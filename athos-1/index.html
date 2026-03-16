@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATHOS TRAVEL – Muntele Athos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#231f20',
+            sky: '#0ca3e6',
+            orange: '#f36f21',
+            paper: '#efefef',
+            mist: '#d7dde1',
+            slate: '#66717c'
+          },
+          fontFamily: {
+            sans: ['Arial', 'Helvetica Neue', 'Helvetica', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 1px 2px rgba(0,0,0,.12)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .font-condensed { font-family: 'Oswald', Arial, sans-serif; }
+    .hero-mountain {
+      background-image: linear-gradient(to bottom, rgba(0,0,0,.02), rgba(0,0,0,.18)), url('https://triadikon.ro/agio-oros-athos-monopatia.jpg');
+      background-size: cover;
+      background-position: center 38%;
+    }
+    .camp-img {
+      background-image: linear-gradient(to bottom, rgba(255,255,255,.05), rgba(0,0,0,.2)), url('https://images.unsplash.com/photo-1464820453369-31d2c0b651af?auto=format&fit=crop&w=900&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    .route-img {
+      background-image: linear-gradient(to bottom, rgba(255,255,255,.05), rgba(0,0,0,.15)), url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    .gallery-a { background-image: url('https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=500&q=80'); }
+    .gallery-b { background-image: url('https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=500&q=80'); }
+    .gallery-c { background-image: url('https://images.unsplash.com/photo-1517821099601-9a8fe9309a80?auto=format&fit=crop&w=500&q=80'); }
+    .gallery-d { background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=500&q=80'); }
+    .gallery-e { background-image: url('https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=500&q=80'); }
+    .gallery-f { background-image: url('https://images.unsplash.com/photo-1464823063530-08f10ed1a2dd?auto=format&fit=crop&w=500&q=80'); }
+    .gallery-g { background-image: url('https://images.unsplash.com/photo-1508264165352-258db2ebd59b?auto=format&fit=crop&w=500&q=80'); }
+    .gallery-h { background-image: url('https://images.unsplash.com/photo-1464207687429-7505649dae38?auto=format&fit=crop&w=500&q=80'); }
+    .gallery-i { background-image: url('https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=500&q=80'); }
+    .blog-1 { background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80'); }
+    .blog-2 { background-image: linear-gradient(135deg,#4ea3f1,#ff5a7d); }
+    .blog-3 { background-image: linear-gradient(135deg,#d8e8f2,#7ec3ea); }
+    .img-cover { background-size: cover; background-position: center; }
+    .topbar-note p { font-size: 10.4px; line-height: 1.1; }
+    p { font-size: 15px; line-height: 1.8; }
+    @media (min-width: 640px) {
+      .topbar-note p { font-size: 11.6px; }
+      p { font-size: 16px; }
+    }
+  </style>
+</head>
+<body class="bg-[#ededed] text-ink antialiased">
+  <!-- SECTION: Header -->
+  <header class="w-full">
+    <div class="topbar-note bg-ink text-white leading-none">
+      <div class="mx-auto flex max-w-[1180px] items-center justify-between px-4 py-[5px] sm:px-6 lg:px-8">
+        <p class="uppercase tracking-[.12em]">hai cu noi in Athos: +40721.330.873 (WhatsApp)</p>
+        <p class="uppercase tracking-[.12em]">Te vom contacta</p>
+      </div>
+    </div>
+    <div class="bg-white shadow-soft">
+      <div class="mx-auto flex max-w-[1180px] flex-col gap-4 px-4 py-3 sm:px-6 md:flex-row md:items-center md:justify-between md:gap-6 lg:px-8">
+        <div class="flex items-center gap-3 md:shrink-0">
+          <div>
+            <div class="font-condensed text-[30px] uppercase leading-none tracking-[.03em] text-[#2f3560] sm:text-[34px]">ATHOS TRAVEL</div>
+          </div>
+        </div>
+        <nav class="flex flex-wrap items-center justify-start gap-3 md:justify-center md:gap-4">
+          <a href="#pelerinaje-2026" class="font-condensed border border-[#2f3560] px-4 py-[9px] text-[14px] uppercase leading-none tracking-[.05em] text-[#2f3560] transition hover:bg-[#2f3560] hover:text-white sm:text-[15px]">Pelerinaje 2026</a>
+          <a href="#rezervari" class="font-condensed border border-[#2f3560] px-4 py-[9px] text-[14px] uppercase leading-none tracking-[.05em] text-[#2f3560] transition hover:bg-[#2f3560] hover:text-white sm:text-[15px]">Permise &amp; Rezervări</a>
+        </nav>
+        <nav class="flex items-center justify-start md:justify-end">
+          <a href="#rezervari" class="font-condensed bg-sky px-4 py-[9px] text-[14px] uppercase leading-none tracking-[.05em] text-white sm:text-[15px]">Rezervă un loc</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- END SECTION -->
+
+  <!-- SECTION: Hero -->
+  <section class="hero-mountain">
+    <div class="mx-auto flex min-h-[310px] max-w-[1400px] items-end px-4 pb-5 sm:min-h-[380px] sm:px-6 lg:min-h-[470px] lg:px-8">
+      <div class="rounded-sm bg-white/35 px-5 py-3 shadow-soft backdrop-blur-[2px]">
+        <h1 class="font-condensed text-3xl uppercase tracking-[.03em] text-white sm:text-4xl">Muntele Athos</h1>
+      </div>
+    </div>
+  </section>
+  <!-- END SECTION -->
+
+  <!-- SECTION: Utility Nav -->
+  <nav class="bg-sky text-white">
+    <div class="mx-auto flex max-w-[1180px] flex-wrap items-center justify-center gap-x-4 gap-y-2 px-4 py-3 text-[10px] font-semibold uppercase tracking-[.16em] sm:px-6 lg:px-8">
+      <a href="#">Prezentare</a>
+      <a href="#">Itinerar</a>
+      <a href="#">Pregătire</a>
+      <a href="#">Echipament</a>
+      <a href="#">De ce să vii cu noi</a>
+      <a href="#">Grupuri private</a>
+      <a href="#">Ghiduri</a>
+      <a href="#">Noutăți</a>
+      <a href="#">Detalii</a>
+      <a href="#" class="bg-orange px-2 py-1">Vezi programul</a>
+    </div>
+  </nav>
+  <!-- END SECTION -->
+
+  <!-- SECTION: Page Tabs -->
+  <section class="border-b border-black/10 bg-[#f4f4f4]">
+    <div class="mx-auto flex max-w-[1180px] flex-wrap gap-x-5 gap-y-2 px-4 py-5 text-[10px] font-semibold uppercase tracking-[.16em] sm:px-6 lg:px-8">
+      <a href="#" class="text-black/50">Pelerinaj</a>
+      <a href="#" class="border-b-2 border-ink pb-1 text-ink">Muntele Athos</a>
+      <a href="#" class="text-black/50">Mănăstiri</a>
+      <a href="#" class="text-black/50">Trasee</a>
+      <a href="#" class="text-black/50">Listă pregătire</a>
+    </div>
+  </section>
+  <!-- END SECTION -->
+
+  <!-- SECTION: Main Content -->
+  <main class="mx-auto max-w-[1180px] px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1.7fr)_320px] lg:gap-10">
+      <article>
+        <h2 class="font-condensed text-[30px] uppercase tracking-[.03em] text-[#2f3560]">Pelerinaj pe Muntele Athos cu ATHOS TRAVEL</h2>
+        <div class="mt-3 bg-[#dbe2e6] p-4 text-[13px] leading-6 text-[#49535b]">
+          <p>O experiență spirituală într-un loc cu totul aparte. Acest program organizat îmbină transportul atent planificat, vizitarea mănăstirilor și o călătorie memorabilă în inima Muntelui Athos.</p>
+          <p class="mt-3">Fiecare plecare este gândită pentru a oferi timp de reculegere, vizite bine organizate și o desfășurare echilibrată, potrivită atât pentru grupuri, cât și pentru pelerini individuali.</p>
+        </div>
+
+        <div class="mt-5 space-y-4 text-[13px] leading-6 text-[#40474d]">
+          <p>Muntele Athos este unul dintre cele mai importante locuri de pelerinaj din lumea ortodoxă. Programul nostru este gândit pentru cei care își doresc o experiență autentică, bine organizată și trăită cu liniște, respect și rânduială.</p>
+          <p>Pe parcursul itinerariului, parcurgem etapele călătoriei într-un ritm echilibrat, cu atenție la transport, cazare, acces și programul de închinare. Obiectivul nu este doar deplasarea, ci o experiență completă și bine așezată.</p>
+          <p>Însoțitorii de grup adaptează desfășurarea programului în funcție de condițiile locale, acces și nevoile pelerinilor. Grupurile sunt organizate astfel încât să păstrăm un ritm bun și o experiență cât mai plăcută pentru toți.</p>
+        </div>
+
+        <h3 class="mt-10 font-condensed text-[28px] uppercase tracking-[.03em] text-[#2f3560]">Prezentare generală</h3>
+        <div class="mt-4 space-y-4 text-[13px] leading-6 text-[#40474d]">
+          <p>Muntele Athos este un teritoriu monastic unic, cu o însemnătate spirituală deosebită și o tradiție neîntreruptă de secole. De la peisajele impresionante până la liniștea așezămintelor monahale, fiecare etapă a călătoriei oferă un cadru profund și memorabil.</p>
+        </div>
+
+        <h4 class="mt-7 font-condensed text-[22px] uppercase tracking-[.03em] text-[#2f3560]">Puncte de interes</h4>
+        <ul class="mt-3 list-disc space-y-1 pl-5 text-[13px] leading-6 text-[#40474d] marker:text-orange">
+          <li>Vizitarea unor mănăstiri cu mare însemnătate spirituală</li>
+          <li>Program bine organizat și echilibrat</li>
+          <li>Transport și coordonare atentă pe tot parcursul călătoriei</li>
+          <li>Grupuri organizate cu atenție și sprijin permanent</li>
+          <li>Experiență potrivită pentru pelerini și grupuri organizate</li>
+          <li>Peisaje deosebite și atmosferă de reculegere</li>
+          <li>Program adaptat în funcție de condițiile locale</li>
+        </ul>
+
+        <div class="mt-6 bg-[#dbe2e6] p-4 text-[13px] italic leading-6 text-[#51616e]">
+          Programul poate suferi mici ajustări în funcție de condițiile locale, aprobări și desfășurarea accesului. Structura generală și ritmul călătoriei rămân însă clare și bine organizate.
+        </div>
+
+        <div class="mt-10 border-t border-black/15 pt-8 text-center text-[13px] italic leading-6 text-[#5a5f63]">
+          <p>Călătoriile organizate în zona Muntelui Athos oferă un cadru aparte, cu încărcătură spirituală, peisaje impresionante și o experiență autentică de pelerinaj. Totul este gândit pentru a păstra echilibrul dintre organizare, reculegere și confort.</p>
+          <button class="mt-5 inline-flex items-center justify-center bg-orange px-4 py-2 text-[10px] font-bold uppercase tracking-[.18em] text-white">De ce să ne alegi</button>
+        </div>
+      </article>
+
+      <aside class="space-y-6">
+        <section class="border-t-[3px] border-[#bfc6cb] pt-3">
+          <h3 class="font-condensed text-[20px] uppercase tracking-[.03em] text-[#2f3560]">Preț pelerinaj</h3>
+          <p class="mt-3 font-semibold text-[#40474d]">680 Euro</p>
+        </section>
+
+        <section class="border-t-[3px] border-[#bfc6cb] pt-3">
+          <h3 class="font-condensed text-[20px] uppercase tracking-[.03em] text-[#2f3560]">Rezervare locuri</h3>
+          <p class="mt-2 text-[#40474d]">Rezervarea din timp este importantă pentru acest program. Îți recomandăm să ne contactezi cu câteva luni înainte pentru a obține datele dorite și cea mai bună flexibilitate.</p>
+        </section>
+
+        <section class="border-t-[3px] border-[#bfc6cb] pt-3">
+          <h3 class="font-condensed text-[20px] uppercase tracking-[.03em] text-[#2f3560]">Program pelerinaje 2026</h3>
+          <div class="mt-3 space-y-3 text-[#40474d]">
+            <div>
+              <p class="font-semibold uppercase tracking-[.12em] text-[#2f3560]">8–14 iunie 2026 • 1 loc disponibil</p>
+              <p>Însoțitor grup: în curs de confirmare</p>
+            </div>
+            <div>
+              <p class="font-semibold uppercase tracking-[.12em] text-[#2f3560]">22–26 iulie, 4–8 septembrie 2026</p>
+              <p>Însoțitor grup: în curs de confirmare</p>
+            </div>
+            <div>
+              <p class="font-semibold uppercase tracking-[.12em] text-[#2f3560]">13–18 septembrie 2026 • 2 locuri</p>
+              <p>Însoțitor grup: ghid desemnat</p>
+            </div>
+          </div>
+          <button class="mt-4 inline-flex items-center justify-center bg-orange px-4 py-2 text-[10px] font-bold uppercase tracking-[.18em] text-white">Solicită rezervare</button>
+          <p class="mt-2 text-[#5d676e]">Ai întrebări? Contactează-ne pentru date personalizate sau grupuri private.</p>
+        </section>
+
+        <section class="border-t-[3px] border-[#bfc6cb] pt-3">
+          <h3 class="font-condensed text-[20px] uppercase tracking-[.03em] text-[#2f3560]">Itinerarii disponibile</h3>
+          <p class="mt-2 text-[#40474d]">Programul principal include etape bine definite, vizite la mănăstiri, timp pentru închinare și o desfășurare atent coordonată. Variantele se aleg în funcție de acces, condiții și ritmul grupului.</p>
+          <p class="mt-3 text-[#40474d]">Putem organiza și programe personalizate pentru grupuri, parohii sau persoane care doresc o experiență adaptată nevoilor proprii.</p>
+        </section>
+      </aside>
+    </div>
+  </main>
+  <!-- END SECTION -->
+
+  <!-- SECTION: Mid Gallery -->
+  <section class="bg-[#efefef] py-16 sm:py-24">
+    <div class="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
+      <div class="mb-6 flex justify-center gap-2">
+        <span class="h-2 w-2 rounded-full border border-black"></span>
+        <span class="h-2 w-2 rounded-full border border-black"></span>
+        <span class="h-2 w-2 rounded-full bg-black"></span>
+        <span class="h-2 w-2 rounded-full border border-black"></span>
+        <span class="h-2 w-2 rounded-full border border-black"></span>
+        <span class="h-2 w-2 rounded-full border border-black"></span>
+        <span class="h-2 w-2 rounded-full border border-black"></span>
+        <span class="h-2 w-2 rounded-full border border-black"></span>
+        <span class="h-2 w-2 rounded-full border border-black"></span>
+        <span class="h-2 w-2 rounded-full border border-black"></span>
+        <span class="h-2 w-2 rounded-full border border-black"></span>
+        <span class="h-2 w-2 rounded-full border border-black"></span>
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-[1fr_1fr_1.15fr]">
+        <article class="camp-img min-h-[220px] overflow-hidden">
+          <div class="flex h-full items-center justify-center p-4">
+            <span class="bg-sky px-5 py-2 text-[10px] font-bold uppercase tracking-[.18em] text-white">Pelerinaje</span>
+          </div>
+        </article>
+        <article class="route-img min-h-[220px] overflow-hidden">
+          <div class="flex h-full items-center justify-center p-4">
+            <span class="bg-sky px-5 py-2 text-[10px] font-bold uppercase tracking-[.18em] text-white">Despre Athos</span>
+          </div>
+        </article>
+        <article class="grid min-h-[220px] grid-cols-3 gap-2">
+          <div class="gallery-a img-cover"></div>
+          <div class="gallery-b img-cover"></div>
+          <div class="gallery-c img-cover"></div>
+          <div class="gallery-d img-cover"></div>
+          <div class="gallery-e img-cover"></div>
+          <div class="gallery-f img-cover"></div>
+          <div class="gallery-g img-cover"></div>
+          <div class="gallery-h img-cover"></div>
+          <div class="gallery-i img-cover"></div>
+          <div class="col-span-3 -mt-[168px] flex items-start justify-center pt-5 md:-mt-[164px]">
+            <span class="bg-sky px-5 py-2 text-[10px] font-bold uppercase tracking-[.18em] text-white">Galerie foto</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- END SECTION -->
+
+  <!-- SECTION: Blog -->
+  <section class="bg-[#dbe2e6] py-10">
+    <div class="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center font-condensed text-[28px] uppercase tracking-[.04em] text-[#2f3560]">Blog ATHOS TRAVEL</h2>
+      <div class="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
+        <article class="bg-white shadow-soft">
+          <div class="blog-1 img-cover h-44"></div>
+          <div class="p-4">
+            <h3 class="font-condensed text-[20px] uppercase leading-5 tracking-[.03em] text-[#2f3560]">Locuri și momente de suflet</h3>
+            <p>Un articol de prezentare cu text echilibrat, conceput pentru a păstra proporțiile și ritmul vizual al paginii.</p>
+          </div>
+        </article>
+        <article class="bg-white shadow-soft">
+          <div class="blog-2 flex h-44 items-center justify-center px-4 text-center font-condensed text-5xl uppercase leading-none tracking-[.04em] text-white">Ghid<br>de călătorie</div>
+          <div class="p-4">
+            <h3 class="font-condensed text-[20px] uppercase leading-5 tracking-[.03em] text-[#2f3560]">Cum te pregătești pentru un pelerinaj reușit</h3>
+            <p>Textul păstrează densitatea vizuală a cardului original și susține aceeași compoziție echilibrată în trei coloane.</p>
+          </div>
+        </article>
+        <article class="bg-white shadow-soft">
+          <div class="blog-3 flex h-44 items-center justify-center px-4 text-center font-condensed text-5xl uppercase leading-none tracking-[.04em] text-[#1f6da8]">Drum,<br>rugăciune</div>
+          <div class="p-4">
+            <h3 class="font-condensed text-[20px] uppercase leading-5 tracking-[.03em] text-[#2f3560]">Ce să ai în bagaj pentru plecare</h3>
+            <p>Acest card păstrează raportul dintre imagine, titlu și descriere, într-un stil curat și echilibrat.</p>
+          </div>
+        </article>
+      </div>
+      <div class="mt-6 text-center">
+        <button class="bg-orange px-4 py-2 text-[10px] font-bold uppercase tracking-[.18em] text-white">Citește mai mult</button>
+      </div>
+    </div>
+  </section>
+  <!-- END SECTION -->
+
+  <!-- SECTION: Why Book -->
+  <section class="bg-sky py-10 text-white">
+    <div class="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center font-condensed text-[30px] uppercase tracking-[.04em]">De ce să rezervi cu ATHOS TRAVEL</h2>
+      <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
+        <article>
+          <h3 class="font-condensed text-[20px] uppercase tracking-[.03em]">Experiență și organizare</h3>
+          <p>ATHOS TRAVEL pune accent pe organizare atentă, comunicare clară și experiențe bine coordonate pentru pelerini care își doresc siguranță și liniște pe tot parcursul călătoriei.</p>
+        </article>
+        <article>
+          <h3 class="font-condensed text-[20px] uppercase tracking-[.03em]">Însoțire și sprijin</h3>
+          <p>Colaboratorii și însoțitorii noștri sunt aleși pentru seriozitate, claritate în comunicare și capacitatea de a crea grupuri unite, cu atenție reală pentru fiecare participant.</p>
+        </article>
+        <article>
+          <h3 class="font-condensed text-[20px] uppercase tracking-[.03em]">Respect pentru locurile sfinte</h3>
+          <p>Respectăm rânduiala locurilor, liniștea așezămintelor și importanța spirituală a fiecărei vizite. Ne dorim ca fiecare călătorie să fie făcută cu grijă, respect și responsabilitate.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- END SECTION -->
+
+  <!-- SECTION: Newsletter -->
+  <section class="bg-white py-10 sm:py-12">
+    <div class="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-6 rounded-sm border border-black/10 bg-[#f8f8f8] p-6 shadow-soft md:grid-cols-[1fr_auto] md:items-center md:gap-8 md:p-8">
+        <div class="text-center md:text-left">
+          <h2 class="font-condensed text-[28px] uppercase tracking-[.04em] text-[#5f666b] sm:text-[32px]">Abonează-te la newsletter</h2>
+          <p class="mt-2 text-[#66717c]">Primește noutăți despre pelerinaje, locuri disponibile și plecările anului viitor direct pe email.</p>
+        </div>
+        <form id="newsletter-form" class="grid grid-cols-1 gap-3 md:min-w-[460px] md:grid-cols-[1fr_auto]" novalidate>
+          <label for="newsletter-email" class="sr-only">Adresa de email</label>
+          <input id="newsletter-email" name="email" type="email" placeholder="Adresa ta de email" required class="w-full rounded-sm border border-black/10 bg-white px-4 py-3 text-[14px] text-[#48525a] outline-none transition focus:border-sky focus:ring-2 focus:ring-sky/20 placeholder:text-[#8a939b] sm:text-[15px]">
+          <button type="submit" class="rounded-sm bg-orange px-5 py-3 text-[11px] font-bold uppercase tracking-[.18em] text-white transition hover:bg-[#de631b] focus:outline-none focus:ring-2 focus:ring-orange/30">Abonează-te</button>
+          <p id="newsletter-message" class="hidden md:col-span-2 text-[14px] leading-6"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- END SECTION -->
+
+  <!-- SECTION: Pelerinaje 2026 -->
+  <section id="pelerinaje-2026" class="bg-white py-12 sm:py-14">
+    <div class="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
+      <div class="max-w-[760px]">
+        <h2 class="font-condensed text-[30px] uppercase tracking-[.04em] text-[#2f3560]">Pelerinaje 2026</h2>
+        <p class="mt-4 text-[#49535b]">Descopera programele noastre pentru 2026 dedicate calatoriilor spirituale si experientelor autentice in locuri cu insemnatate religioasa. Structura sectiunii urmeaza ritmul vizual al paginii, cu un titlu puternic si continut aerisit.</p>
+      </div>
+      <div class="mt-8 grid grid-cols-1 gap-5 md:grid-cols-3">
+        <article class="bg-[#dbe2e6] p-5">
+          <h3 class="font-condensed text-[22px] uppercase tracking-[.03em] text-[#2f3560]">Muntele Athos</h3>
+          <p class="mt-3 text-[#48525a]">Pelerinaj dedicat vizitarii manastirilor athonite, cu program echilibrat, transferuri organizate si asistenta pe tot parcursul calatoriei.</p>
+        </article>
+        <article class="bg-[#dbe2e6] p-5">
+          <h3 class="font-condensed text-[22px] uppercase tracking-[.03em] text-[#2f3560]">Grecia de Nord</h3>
+          <p class="mt-3 text-[#48525a]">Itinerarii cu opriri in locuri de inchinare, orase istorice si obiective importante pentru grupuri si pelerini individuali.</p>
+        </article>
+        <article class="bg-[#dbe2e6] p-5">
+          <h3 class="font-condensed text-[22px] uppercase tracking-[.03em] text-[#2f3560]">Circuite Personalizate</h3>
+          <p class="mt-3 text-[#48525a]">Programe construite la cerere pentru parohii, grupuri restranse sau familii care doresc o experienta privata si bine organizata.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- END SECTION -->
+
+  <!-- SECTION: Rezervari -->
+  <section id="rezervari" class="bg-[#dbe2e6] py-12 sm:py-14">
+    <div class="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-[1.05fr_.95fr] lg:items-start">
+        <div>
+          <h2 class="font-condensed text-[30px] uppercase tracking-[.04em] text-[#2f3560]">Permise &amp; Rezervări pentru Athos</h2>
+          <p class="mt-4 text-[#49535b]">Vrei să mergi în Athos fără stresul organizării? Noi ne ocupăm pentru tine de tot ce este mai greu și mai sensibil în pregătirea pelerinajului, astfel încât tu să poți pleca liniștit, cu toate detaliile puse la punct.</p>
+          <p class="mt-4 text-[#49535b]">Pentru <strong>150 euro</strong>, îți oferim un serviciu complet de intermediere și organizare: obținerea <strong>diamonitiriei</strong>, rezervările necesare pentru traseul tău și sprijin telefonic dacă apar situații neprevăzute pe parcurs.</p>
+
+          <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <article class="bg-white p-5 shadow-soft">
+              <h3 class="font-condensed text-[22px] uppercase tracking-[.03em] text-[#2f3560]">Ce facem pentru tine</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5 text-[#48525a] marker:text-orange">
+                <li>Obținem permisul de intrare în Athos (diamonitiria)</li>
+                <li>Facem rezervările la mănăstiri, acolo unde este nevoie</li>
+                <li>Te ajutăm cu rezervări la hotel pentru sosire sau întoarcere</li>
+                <li>Organizăm rezervările pentru vaporaș și transport local</li>
+                <li>Îți oferim îndrumare clară pentru pașii pelerinajului</li>
+              </ul>
+            </article>
+            <article class="bg-white p-5 shadow-soft">
+              <h3 class="font-condensed text-[22px] uppercase tracking-[.03em] text-[#2f3560]">De ce merită</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5 text-[#48525a] marker:text-orange">
+                <li>Economisești timp și eviți greșelile de organizare</li>
+                <li>Ai toate rezervările centralizate și confirmate</li>
+                <li>Primești ajutor concret chiar și când ești deja plecat</li>
+                <li>Nu pierzi timp cu apeluri, verificări și coordonare</li>
+                <li>Pleci cu mai multă liniște și claritate</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="mt-6 bg-white p-5 shadow-soft">
+            <h3 class="font-condensed text-[22px] uppercase tracking-[.03em] text-[#2f3560]">Important</h3>
+            <p class="mt-3 text-[#48525a]">Acest serviciu este dedicat celor care doresc să meargă pe cont propriu în Athos. Noi <strong>nu însoțim grupul</strong>, însă ne ocupăm de partea logistică și rămânem disponibili telefonic pentru asistență dacă întâmpini dificultăți legate de program, traseu sau rezervări.</p>
+          </div>
+        </div>
+
+        <div class="space-y-5">
+          <div class="bg-white p-6 shadow-soft">
+            <p class="font-condensed text-[18px] uppercase tracking-[.14em] text-[#7a838a]">Pachet fix</p>
+            <p class="mt-2 font-condensed text-[44px] leading-none text-[#2f3560]">150€</p>
+            <p class="mt-3 text-[#49535b]">Prețul include serviciul de organizare și intermediere pentru documente, rezervări și suport telefonic pe durata pelerinajului.</p>
+            <a href="#" class="mt-5 inline-flex items-center justify-center bg-orange px-5 py-3 text-[11px] font-bold uppercase tracking-[.18em] text-white">Solicită acest serviciu</a>
+          </div>
+
+          <form class="grid grid-cols-1 gap-3 bg-white p-5 shadow-soft sm:grid-cols-2">
+            <input type="text" placeholder="Nume complet" class="w-full border border-black/10 px-4 py-3 text-[15px] text-[#48525a] outline-none placeholder:text-[#8a939b] sm:col-span-1 sm:text-[16px]">
+            <input type="email" placeholder="Email" class="w-full border border-black/10 px-4 py-3 text-[15px] text-[#48525a] outline-none placeholder:text-[#8a939b] sm:col-span-1 sm:text-[16px]">
+            <input type="tel" placeholder="Telefon" class="w-full border border-black/10 px-4 py-3 text-[15px] text-[#48525a] outline-none placeholder:text-[#8a939b] sm:col-span-1 sm:text-[16px]">
+            <input type="text" placeholder="Perioada dorită" class="w-full border border-black/10 px-4 py-3 text-[15px] text-[#48525a] outline-none placeholder:text-[#8a939b] sm:col-span-1 sm:text-[16px]">
+            <textarea placeholder="Spune-ne de ce rezervări ai nevoie: diamonitirie, mănăstiri, hotel, vaporaș, microbuze" rows="5" class="w-full border border-black/10 px-4 py-3 text-[15px] text-[#48525a] outline-none placeholder:text-[#8a939b] sm:col-span-2 sm:text-[16px]"></textarea>
+            <button type="submit" class="bg-orange px-4 py-3 text-[11px] font-bold uppercase tracking-[.18em] text-white sm:col-span-2">Trimite solicitarea</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END SECTION -->
+
+  <!-- SECTION: Partners -->
+  <section class="bg-[#f5f5f5] py-12">
+    <div class="mx-auto max-w-[1180px] px-4 text-center sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-[700px] border-t border-black/15 pt-5">
+        <h2 class="font-condensed text-[20px] uppercase tracking-[.1em] text-[#7b8085]">Parteneri și acreditări</h2>
+      </div>
+      <div class="mt-10 grid grid-cols-2 items-center justify-items-center gap-8 md:grid-cols-4">
+        <div class="text-center text-[#b6bf31]">
+          <div class="text-6xl">◉</div>
+          <div class="-mt-2 text-[14px] lowercase text-[#8d8d7a]">respectă locul</div>
+        </div>
+        <div class="font-condensed text-5xl leading-none text-[#555]">THE<br>NORTH<br>FACE</div>
+        <div class="flex h-28 w-28 items-center justify-center rounded-full border-4 border-[#666] text-center text-[10px] font-bold uppercase leading-tight text-[#666]">Partener<br>autorizat<br>AMGA</div>
+        <div class="font-condensed text-[34px] uppercase tracking-[.2em] text-[#58a7dc]">Tomorrows Air</div>
+      </div>
+      <p>ATHOS TRAVEL colaborează cu parteneri de încredere și organizează programe atent pregătite, într-un stil clar, aerisit și ușor de parcurs.</p>
+    </div>
+  </section>
+  <!-- END SECTION -->
+
+  <!-- SECTION: Footer -->
+  <footer class="bg-ink py-4 text-center text-[10px] uppercase tracking-[.12em] text-white/85">
+    <div class="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
+      ATHOS TRAVEL © 2026 &nbsp;•&nbsp; România &nbsp;•&nbsp; +40 721 330 873 &nbsp;•&nbsp; contact@triadikon.ro
+    </div>
+  </footer>
+  <!-- END SECTION -->
+  <script>
+    const newsletterForm = document.getElementById('newsletter-form');
+    const newsletterEmail = document.getElementById('newsletter-email');
+    const newsletterMessage = document.getElementById('newsletter-message');
+
+    if (newsletterForm && newsletterEmail && newsletterMessage) {
+      newsletterForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const email = newsletterEmail.value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        newsletterMessage.classList.remove('hidden', 'text-red-600', 'text-green-700');
+
+        if (!email) {
+          newsletterMessage.textContent = 'Te rugăm să introduci adresa de email.';
+          newsletterMessage.classList.add('text-red-600');
+          newsletterEmail.focus();
+          return;
+        }
+
+        if (!emailPattern.test(email)) {
+          newsletterMessage.textContent = 'Te rugăm să introduci o adresă de email validă.';
+          newsletterMessage.classList.add('text-red-600');
+          newsletterEmail.focus();
+          return;
+        }
+
+        newsletterMessage.textContent = 'Mulțumim! Te-am înscris la newsletter.';
+        newsletterMessage.classList.add('text-green-700');
+        newsletterForm.reset();
+      });
+    }
+  </script>
+</body>
+</html>
